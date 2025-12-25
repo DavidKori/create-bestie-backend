@@ -18,13 +18,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-// app.use(cors({
-//   origin: ['https://davidkori.github.io',
-//      'https://davidkori.github.io/create-bestie.com',
-//     'https://davidkori.github.io/bestie.com'], // No trailing slashes or paths
-//   credentials: true
-// }))
-app.use(cors());
+app.use(cors({
+  origin: ['https://davidkori.github.io',
+     'https://davidkori.github.io/create-bestie.com',
+    'https://davidkori.github.io/bestie.com'], // No trailing slashes or paths
+  credentials: true
+}))
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
